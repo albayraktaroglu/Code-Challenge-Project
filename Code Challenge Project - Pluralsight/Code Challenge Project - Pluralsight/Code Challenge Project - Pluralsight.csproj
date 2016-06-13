@@ -164,7 +164,6 @@
     <Compile Include="API\QuestionsController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\aaaaaaaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Database Model.Context.cs">
       <AutoGen>True</AutoGen>
@@ -205,11 +204,6 @@
     <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Views\Home\Create.cshtml" />
     <Content Include="Views\Home\Delete.cshtml" />
-    <Content Include="Views\aaaaaaa\Create.cshtml" />
-    <Content Include="Views\aaaaaaa\Delete.cshtml" />
-    <Content Include="Views\aaaaaaa\Details.cshtml" />
-    <Content Include="Views\aaaaaaa\Edit.cshtml" />
-    <Content Include="Views\aaaaaaa\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

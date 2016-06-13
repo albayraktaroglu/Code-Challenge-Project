@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Code Challenge Project - Pluralsight.dll">
-      <publishTime>06/13/2016 01:47:36</publishTime>
+      <publishTime>06/13/2016 02:41:46</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>11/03/2015 16:43:42</publishTime>
@@ -164,7 +164,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/11/2016 20:56:11</publishTime>
     </File>
     <File Include="Views/Home/Delete.cshtml">
-      <publishTime>06/11/2016 23:50:47</publishTime>
+      <publishTime>06/13/2016 02:25:55</publishTime>
     </File>
     <File Include="Views/Home/Edit.cshtml">
       <publishTime>06/11/2016 18:37:39</publishTime>
@@ -176,7 +176,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/12/2016 03:38:19</publishTime>
     </File>
     <File Include="Views/Home/Index3.cshtml">
-      <publishTime>06/13/2016 01:29:05</publishTime>
+      <publishTime>06/13/2016 02:09:13</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>06/12/2016 22:59:34</publishTime>
