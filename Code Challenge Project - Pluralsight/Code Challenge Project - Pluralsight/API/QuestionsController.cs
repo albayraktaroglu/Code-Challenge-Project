@@ -211,16 +211,16 @@ namespace Code_Challenge_Project___Pluralsight.API
 
      
         // DELETE: api/Questions/5
-        public async Task<IHttpActionResult> DeleteQuestion(int id)
+        public IHttpActionResult DeleteQuestion(int id)
         {
-            Question question = await db.Questions.FindAsync(id);
+            Question question = db.Questions.Find(id);
             if (question == null)
             {
                 return NotFound();
             }
 
             db.Questions.Remove(question);
-            await db.SaveChangesAsync();
+            db.SaveChanges();
 
             return Ok(question);
         }

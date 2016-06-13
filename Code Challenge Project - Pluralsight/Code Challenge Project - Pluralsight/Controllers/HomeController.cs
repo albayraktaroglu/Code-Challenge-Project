@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 using PagedList;
 using Code_Challenge_Project___Pluralsight.API;
+using System.Net;
 
 namespace Code_Challenge_Project___Pluralsight.Controllers
 {
@@ -101,10 +102,29 @@ namespace Code_Challenge_Project___Pluralsight.Controllers
             return View();
         }
 
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            Question ques = db.Questions.Find(id);
-            return View(ques);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Question question = db.Questions.Find(id);
+            if (question == null)
+            {
+                return HttpNotFound();
+            }
+            return View(question);
+        }
+
+        // POST: aaaaaaa/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public  ActionResult DeleteConfirmed(int id)
+        {
+            Question question =  db.Questions.Find(id);
+            db.Questions.Remove(question);
+            db.SaveChangesAsync();
+            return RedirectToAction("Index");
         }
     }
 }

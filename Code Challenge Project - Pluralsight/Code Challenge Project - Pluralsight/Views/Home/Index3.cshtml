@@ -64,11 +64,22 @@ Below list fetched by jquery from asp.net web API
         });
 
         //To display the resutlt of the answered question
-        $('#myForm input').on('change', function () {
+        $('#myForm input').on('click','input.rbt', function () {
             alert($('input[name=radioName]:checked', '#myForm').val());
         });
         $("input").change(function () {
             alert("The text has been changed.");
+        });
+        $("input[name=rbt]").click(function () {
+            alert("selected");
+        });
+        $("input[name=rbt]").bind('change', function () {
+            alert("selected");
+        });
+
+        $('input[name=rbt]').on('click', 'input', function () {
+            // snip...
+            alert("selected");
         });
 
 

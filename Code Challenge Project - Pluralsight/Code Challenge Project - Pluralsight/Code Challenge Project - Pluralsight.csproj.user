@@ -11,6 +11,7 @@
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <WebStackScaffolding_DbContextTypeFullName>Code_Challenge_Project___Pluralsight.DB_9CC311_infoalbayraktarEntities</WebStackScaffolding_DbContextTypeFullName>
     <NameOfLastUsedPublishProfile>albayraktarogluu.net</NameOfLastUsedPublishProfile>
+    <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
