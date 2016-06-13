@@ -110,19 +110,19 @@ namespace Code_Challenge_Project___Pluralsight.API
                 int answerofnewq = Operator(val[2], Convert.ToInt32(val[0]), Convert.ToInt32(val[1]));
                 newQ.Answer = answerofnewq;
 
-                Random rnd;
+                Random rnd = new Random();
                 foreach (var item in newQ.Distractors)
                 {
-                    rnd = new Random();
+                    
                     item.Distrctr = rnd.Next(1, 4000);
                 }
 
                 //assing random options as an answer
-                try {
-                    newQ.Distractors.ToArray()[new Random().Next(0, newQ.Distractors.Count)].Distrctr = answerofnewq;
-                } catch (Exception) {
-                    return Request.CreateResponse(HttpStatusCode.BadRequest, "bad request");
-                }
+                //try {
+                //    //newQ.Distractors.ToArray()[newQ.Distractors.Count].Distrctr = answerofnewq;
+                //} catch (Exception) {
+                //    return Request.CreateResponse(HttpStatusCode.BadRequest, "bad request");
+                //}
 
                 
                 db.SaveChanges();
@@ -154,10 +154,10 @@ namespace Code_Challenge_Project___Pluralsight.API
                 obj.ScndOprnd = Convert.ToInt32(val[1]);
                 obj.MthOprnd = val[2];
 
-                Random rndom;
+                Random rndom = new Random();
                 foreach (var item in obj.Distractors)
                 {
-                    rndom = new Random();
+                    
                     item.Distrctr = rndom.Next(1, 4000);
                 }
 
@@ -167,18 +167,20 @@ namespace Code_Challenge_Project___Pluralsight.API
                 int answerofnewq = Operator(val[2], Convert.ToInt32(val[0]), Convert.ToInt32(val[1]));
                 obj.Answer = answerofnewq;
 
-                
+
+
+                Random optionrandom = new Random();
                 int lastrecordquestionnumber = db.Distractors.ToList()[db.Distractors.ToList().Count - 1].QID + 1;
                 for (int i = 0; i < 3; i++)
                    
                         obj.Distractors.Add(new Distractor {
                         QID = lastrecordquestionnumber,
-                        Distrctr = new Random().Next(1, 4000),
+                        Distrctr = optionrandom.Next(1, 4000),
                         Question = obj
 
                         });
 
-                obj.Distractors.ToArray()[new Random().Next(0, obj.Distractors.Count)].Distrctr = answerofnewq;
+                obj.Distractors.ToArray()[optionrandom.Next(0, obj.Distractors.Count)].Distrctr = answerofnewq;
                
 
 

@@ -4,14 +4,21 @@
 
 <h2>Questions - Restful API GET HTTP Request</h2>
 Below list fetched by jquery from asp.net web API
-<table id="tbQuestions">
-    <tr style="background-color: #808080; color: white;">
-        <td>Question</td>
-    </tr>
-</table>
-<script>
+
+<form id="myForm">
+    <table id="tbQuestions">
+        <tr style="background-color: #808080; color: white;">
+            <td>Question</td>
+        </tr>
+    </table>
+</form>
+
+
+    <script>
     $(document).ready(function () {
 
+
+        //get the all questions using api and call api using ajax request
         var root = "http://" + window.location.host;
         $.ajax({
             url: root+"/api/Questions",
@@ -26,10 +33,10 @@ Below list fetched by jquery from asp.net web API
 
                     data[i].distractors[data[i].distractors.length] = data[i].answr;
 
-                    for (var op = 0 ; op < data[i].distractors.length-1 ; op++) {
+                    for (var op = 0 ; op < data[i].distractors.length  ; op++) {
 
-                        if (op == data[i].distractors.length-2) {
-                            var radioBtn = $('<input type="radio" name="rbt" />').attr('value', data[i].op_one).attr('id', data[i].math_op + "_" + data[i].op_two)
+                        if (op == data[i].distractors.length-1 ) {
+                            var radioBtn = $('<input type="radio" name="rbt" />').attr('value', data[i].answr).attr('id', data[i].answr)
 
 
                             radioBtn.appendTo("#" + data[i].qid);
@@ -46,19 +53,30 @@ Below list fetched by jquery from asp.net web API
                             $("#" + data[i].qid).append(text + "&nbsp; &nbsp; &nbsp;");
                         }
 
-                            
-                            
+
+
                         }
-                        
-                    
+
+
                 }
             },
             error: function (msg) { alert(msg); }
         });
-    });
-</script>
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+        //To display the resutlt of the answered question
+        $('#myForm input').on('change', function () {
+            alert($('input[name=radioName]:checked', '#myForm').val());
+        });
+        $("input").change(function () {
+            alert("The text has been changed.");
+        });
+
+
+
+    });
+    </script>
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 

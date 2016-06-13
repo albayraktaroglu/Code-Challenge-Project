@@ -46,3 +46,4 @@ C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pl
 C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Http.WebHost.xml
 C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\obj\Debug\Code Challenge Project - Pluralsight.dll
 C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\obj\Debug\Code Challenge Project - Pluralsight.pdb
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\obj\Debug\Code Challenge Project - Pluralsight.csprojResolveAssemblyReference.cache
