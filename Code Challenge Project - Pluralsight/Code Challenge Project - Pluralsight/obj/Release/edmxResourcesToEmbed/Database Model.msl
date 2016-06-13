@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_9CC311_infoalbayraktarModelStoreContainer" CdmEntityContainer="DB_9CC311_infoalbayraktarEntities">
+    <EntitySetMapping Name="Distractors">
+      <EntityTypeMapping TypeName="DB_9CC311_infoalbayraktarModel.Distractor">
+        <MappingFragment StoreEntitySet="Distractor">
+          <ScalarProperty Name="DistID" ColumnName="DistID" />
+          <ScalarProperty Name="QID" ColumnName="QID" />
+          <ScalarProperty Name="Distrctr" ColumnName="Distrctr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="DB_9CC311_infoalbayraktarModel.Question">
+        <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="Qid" ColumnName="Qid" />
+          <ScalarProperty Name="FrstOprnd" ColumnName="FrstOprnd" />
+          <ScalarProperty Name="ScndOprnd" ColumnName="ScndOprnd" />
+          <ScalarProperty Name="MthOprnd" ColumnName="MthOprnd" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

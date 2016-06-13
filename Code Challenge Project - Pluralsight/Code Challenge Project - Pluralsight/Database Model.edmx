@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_9CC311_infoalbayraktarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Distractor">
+          <Key>
+            <PropertyRef Name="DistID" />
+          </Key>
+          <Property Name="DistID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QID" Type="int" Nullable="false" />
+          <Property Name="Distrctr" Type="int" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Qid" />
+          </Key>
+          <Property Name="Qid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FrstOprnd" Type="int" Nullable="false" />
+          <Property Name="ScndOprnd" Type="int" Nullable="false" />
+          <Property Name="MthOprnd" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="Answer" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Distractor_Question1">
+          <End Role="Question" Type="Self.Question" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Distractor" Type="Self.Distractor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="Qid" />
+            </Principal>
+            <Dependent Role="Distractor">
+              <PropertyRef Name="QID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_9CC311_infoalbayraktarModelStoreContainer">
+          <EntitySet Name="Distractor" EntityType="Self.Distractor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Distractor_Question1" Association="Self.FK_Distractor_Question1">
+            <End Role="Question" EntitySet="Question" />
+            <End Role="Distractor" EntitySet="Distractor" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_9CC311_infoalbayraktarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Distractor">
+          <Key>
+            <PropertyRef Name="DistID" />
+          </Key>
+          <Property Name="DistID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QID" Type="Int32" Nullable="false" />
+          <Property Name="Distrctr" Type="Int32" />
+          <NavigationProperty Name="Question" Relationship="Self.FK_Distractor_Question1" FromRole="Distractor" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Qid" />
+          </Key>
+          <Property Name="Qid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FrstOprnd" Type="Int32" Nullable="false" />
+          <Property Name="ScndOprnd" Type="Int32" Nullable="false" />
+          <Property Name="MthOprnd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Answer" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Distractors" Relationship="Self.FK_Distractor_Question1" FromRole="Question" ToRole="Distractor" />
+        </EntityType>
+        <Association Name="FK_Distractor_Question1">
+          <End Role="Question" Type="Self.Question" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Distractor" Type="Self.Distractor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="Qid" />
+            </Principal>
+            <Dependent Role="Distractor">
+              <PropertyRef Name="QID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_9CC311_infoalbayraktarEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Distractors" EntityType="Self.Distractor" />
+          <EntitySet Name="Questions" EntityType="Self.Question" />
+          <AssociationSet Name="FK_Distractor_Question1" Association="Self.FK_Distractor_Question1">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="Distractor" EntitySet="Distractors" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_9CC311_infoalbayraktarModelStoreContainer" CdmEntityContainer="DB_9CC311_infoalbayraktarEntities">
+          <EntitySetMapping Name="Distractors">
+            <EntityTypeMapping TypeName="DB_9CC311_infoalbayraktarModel.Distractor">
+              <MappingFragment StoreEntitySet="Distractor">
+                <ScalarProperty Name="DistID" ColumnName="DistID" />
+                <ScalarProperty Name="QID" ColumnName="QID" />
+                <ScalarProperty Name="Distrctr" ColumnName="Distrctr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="DB_9CC311_infoalbayraktarModel.Question">
+              <MappingFragment StoreEntitySet="Question">
+                <ScalarProperty Name="Qid" ColumnName="Qid" />
+                <ScalarProperty Name="FrstOprnd" ColumnName="FrstOprnd" />
+                <ScalarProperty Name="ScndOprnd" ColumnName="ScndOprnd" />
+                <ScalarProperty Name="MthOprnd" ColumnName="MthOprnd" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

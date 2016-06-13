@@ -1,0 +1,48 @@
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\csc.exe
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\vbc.exe
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\VBCSCompiler.exe
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\Code Challenge Project - Pluralsight.dll.config
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\Code Challenge Project - Pluralsight.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\Code Challenge Project - Pluralsight.pdb
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\EntityFramework.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\EntityFramework.SqlServer.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\Newtonsoft.Json.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\PagedList.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\PagedList.Mvc.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Net.Http.Formatting.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Helpers.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Http.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Http.WebHost.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Mvc.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Razor.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Webpages.Deployment.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Webpages.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Webpages.Razor.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\EntityFramework.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\EntityFramework.SqlServer.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\PagedList.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\PagedList.Mvc.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Razor.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Webpages.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Webpages.Deployment.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Webpages.Razor.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Helpers.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Mvc.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\Newtonsoft.Json.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Net.Http.Formatting.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Http.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\bin\System.Web.Http.WebHost.xml
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\obj\Debug\Code Challenge Project - Pluralsight.dll
+C:\Users\albay\Documents\Visual Studio 2015\Projects\Code Challenge Project - Pluralsight\Code Challenge Project - Pluralsight\obj\Debug\Code Challenge Project - Pluralsight.pdb

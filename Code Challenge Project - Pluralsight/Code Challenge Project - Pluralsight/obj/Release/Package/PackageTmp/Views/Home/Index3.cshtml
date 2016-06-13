@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "All Questions GET API";
+}
+
+<h2>Questions - Restful API GET HTTP Request</h2>
+Below list fetched by jquery from asp.net web API
+<table id="tbQuestions">
+    <tr style="background-color: #808080; color: white;">
+        <td>Question</td>
+    </tr>
+</table>
+<script>
+    $(document).ready(function () {
+
+        var root = "http://" + window.location.host;
+        $.ajax({
+            url: root+"/api/Questions",
+            type: "Get",
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+
+                    var sum = $("<tr><td>" + data[i].qid + "-) What is &nbsp; " + data[i].op_one + data[i].math_op + data[i].op_two + " ? </td></tr>" +
+                        "<tr id=" + data[i].qid +"> </tr>");
+
+                    sum.appendTo("#tbQuestions");
+
+                    data[i].distractors[data[i].distractors.length] = data[i].answr;
+
+                    for (var op = 0 ; op < data[i].distractors.length-1 ; op++) {
+
+                        if (op == data[i].distractors.length-2) {
+                            var radioBtn = $('<input type="radio" name="rbt" />').attr('value', data[i].op_one).attr('id', data[i].math_op + "_" + data[i].op_two)
+
+
+                            radioBtn.appendTo("#" + data[i].qid);
+                            $("#" + data[i].qid).append(data[i].answr + "&nbsp; &nbsp; &nbsp;");
+                            break;
+
+                        }
+                        else {
+                            var radioBtn = $('<input type="radio" name="rbt" />').attr('value', data[i].distractors[op].option).attr('id', data[i].distractors[op].option + "_" + data[i].qid)
+                            var text = data[i].distractors[op].option;
+
+
+                            radioBtn.appendTo("#" + data[i].qid);
+                            $("#" + data[i].qid).append(text + "&nbsp; &nbsp; &nbsp;");
+                        }
+
+                            
+                            
+                        }
+                        
+                    
+                }
+            },
+            error: function (msg) { alert(msg); }
+        });
+    });
+</script>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

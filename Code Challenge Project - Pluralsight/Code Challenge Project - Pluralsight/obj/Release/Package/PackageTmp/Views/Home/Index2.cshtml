@@ -1,0 +1,68 @@
+﻿@model PagedList.IPagedList<Code_Challenge_Project___Pluralsight.Question>
+
+@*@model PagedList.IPagedList<ContosoUniversity.Models.Student>*@
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<div class="row">
+    <div id="cruddiv">
+        <p>
+            @Html.ActionLink("Create New Question", "Create")
+        </p>
+    </div>
+</div>
+@using (Html.BeginForm("Index2","Home", FormMethod.Get))
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<div class="row">
+    
+    <div id="questiondiv">
+        <table class="table">
+            <tr>
+                <th>
+                    <h3> Questions </h3> 
+                </th>
+                
+                <th>
+                    @Html.ActionLink("Order by Math Operator", "Index2", new { sortOrder = "Math Operand", currentFilter = ViewBag.CurrentFilter })
+                </th>
+                <th></th>
+            </tr>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        What is &nbsp
+                        @Html.DisplayFor(modelItem => item.FrstOprnd)&nbsp
+                        @Html.DisplayFor(modelItem => item.MthOprnd)&nbsp
+                        @Html.DisplayFor(modelItem => item.ScndOprnd)&nbsp ?
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Qid }) 
+                        ||
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Qid })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+        <br />
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Index2",
+    new { page, sortOrder = ViewBag.CurrentSort}))
+    </div>
+</div>
+
+
+
+

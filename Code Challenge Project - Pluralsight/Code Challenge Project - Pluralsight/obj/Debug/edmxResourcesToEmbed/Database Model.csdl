@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_9CC311_infoalbayraktarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Distractor">
+    <Key>
+      <PropertyRef Name="DistID" />
+    </Key>
+    <Property Name="DistID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QID" Type="Int32" Nullable="false" />
+    <Property Name="Distrctr" Type="Int32" />
+    <NavigationProperty Name="Question" Relationship="Self.FK_Distractor_Question1" FromRole="Distractor" ToRole="Question" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="Qid" />
+    </Key>
+    <Property Name="Qid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FrstOprnd" Type="Int32" Nullable="false" />
+    <Property Name="ScndOprnd" Type="Int32" Nullable="false" />
+    <Property Name="MthOprnd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Answer" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Distractors" Relationship="Self.FK_Distractor_Question1" FromRole="Question" ToRole="Distractor" />
+  </EntityType>
+  <Association Name="FK_Distractor_Question1">
+    <End Role="Question" Type="Self.Question" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Distractor" Type="Self.Distractor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="Qid" />
+      </Principal>
+      <Dependent Role="Distractor">
+        <PropertyRef Name="QID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_9CC311_infoalbayraktarEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Distractors" EntityType="Self.Distractor" />
+    <EntitySet Name="Questions" EntityType="Self.Question" />
+    <AssociationSet Name="FK_Distractor_Question1" Association="Self.FK_Distractor_Question1">
+      <End Role="Question" EntitySet="Questions" />
+      <End Role="Distractor" EntitySet="Distractors" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

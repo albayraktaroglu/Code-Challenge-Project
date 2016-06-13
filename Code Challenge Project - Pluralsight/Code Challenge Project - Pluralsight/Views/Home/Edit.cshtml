@@ -1,0 +1,111 @@
+﻿@model Code_Challenge_Project___Pluralsight.Question
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Question</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Qid)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FrstOprnd, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FrstOprnd, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FrstOprnd, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ScndOprnd, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ScndOprnd, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ScndOprnd, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MthOprnd, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+
+
+                @{
+                    List<SelectListItem> listItems = new List<SelectListItem>();
+                    listItems.Add(new SelectListItem
+                    {
+                        Text = "+",
+                        Value = "+",
+                        Selected = true
+                    });
+                    listItems.Add(new SelectListItem
+                    {
+                        Text = "-",
+                        Value = "-",
+                    });
+                    listItems.Add(new SelectListItem
+                    {
+                        Text = "*",
+                        Value = "*"
+                    });
+                    listItems.Add(new SelectListItem
+                    {
+                        Text = "/",
+                        Value = "/"
+                    });
+                }
+
+                @Html.DropDownListFor(model => model.MthOprnd, listItems, "-- Select Math Operation --", new { htmlAttributes = new { @class = "form-control" } })
+
+
+                @*@Html.EditorFor(model => model.MthOprnd, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.MthOprnd, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" id="EditApi" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script>
+    $(document).ready(function () {
+        var root = "http://" + window.location.host;
+
+        $("#EditApi").click(function () {
+            // debugger;
+            var question_id = $("#Qid").val();
+            var op_one = $("#FrstOprnd").val();
+            var op_two = $("#ScndOprnd").val();
+            var drop_math = $("#MthOprnd").val();
+            
+            $.ajax({
+                url: root+"/api/Questions",
+                type: "Put",
+                data: JSON.stringify([op_one, op_two, drop_math, question_id]),
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    alert('Updated Successfully');
+                    window.location.href = "../Index";
+                },
+                error: function (msg) { alert(msg); }
+            });
+        });
+    });
+</script>
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
