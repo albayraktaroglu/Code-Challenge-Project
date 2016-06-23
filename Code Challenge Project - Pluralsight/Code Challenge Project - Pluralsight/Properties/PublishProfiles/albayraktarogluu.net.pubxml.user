@@ -176,7 +176,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/12/2016 03:38:19</publishTime>
     </File>
     <File Include="Views/Home/Index3.cshtml">
-      <publishTime>06/13/2016 02:09:13</publishTime>
+      <publishTime>06/13/2016 02:50:35</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>06/12/2016 22:59:34</publishTime>

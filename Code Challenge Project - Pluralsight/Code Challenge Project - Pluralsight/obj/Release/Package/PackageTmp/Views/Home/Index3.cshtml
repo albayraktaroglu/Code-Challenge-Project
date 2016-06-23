@@ -36,7 +36,7 @@ Below list fetched by jquery from asp.net web API
                     for (var op = 0 ; op < data[i].distractors.length  ; op++) {
 
                         if (op == data[i].distractors.length-1 ) {
-                            var radioBtn = $('<input type="radio" name="rbt" />').attr('value', data[i].answr).attr('id', data[i].answr)
+                            var radioBtn = $('<input type="radio" name="rbt' + data[i].qid + '"/>').attr('value', data[i].answr).attr('id', data[i].answr)
 
 
                             radioBtn.appendTo("#" + data[i].qid);
@@ -45,7 +45,7 @@ Below list fetched by jquery from asp.net web API
 
                         }
                         else {
-                            var radioBtn = $('<input type="radio" name="rbt" />').attr('value', data[i].distractors[op].option).attr('id', data[i].distractors[op].option + "_" + data[i].qid)
+                            var radioBtn = $('<input type="radio" name="rbt' + data[i].qid + '"/>').attr('value', data[i].distractors[op].option).attr('id', data[i].distractors[op].option + "_" + data[i].qid)
                             var text = data[i].distractors[op].option;
 
 
